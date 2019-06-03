@@ -123,6 +123,7 @@ function leer(){
 	},errores);
 }
 
+//lista todos los nombres de directorios o archivos, ademas de permitir acceder a los directorios cuando demos clic
 function listar(archivos){
 	for(var i=0;i<archivos.length;i++){
 		if(archivos[i].isFile){
@@ -134,12 +135,14 @@ function listar(archivos){
 	}
 }
 
+//cambia la direcion de la ruta y asi se  puede mover entre directorios creados
 function cambiardir(nuevaruta){
 
 	ruta=ruta+nuevaruta+"/";
 	mostrar();
 }
 
+//volver uno o varios pasos atras cuando se esta en un directorio
 function volver(){
 	
 	espacio.getDirectory(ruta,null,function(dir_actual)
@@ -152,6 +155,7 @@ function volver(){
 
 }
 
+//en teoria es la funcion borrar, limpia todo de las cajas de texto y actualiza la vista de los resultados con la funcion Mostrar()
 function exito(){
 
 		document.getElementById("entrada").value="";
@@ -171,9 +175,6 @@ function errores(e){
 
 	alert("Ha habido un error: "+e.code);
 }
-
-
-
 
 
 
