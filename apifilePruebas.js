@@ -1,4 +1,3 @@
-
 function comenzar(){
 
 	zonadatos = document.getElementById("zonadatos");
@@ -18,7 +17,7 @@ function comenzar(){
 
 }
 
-
+//solicita permisos al sistema para poder crear lso directorios o archivos
 function acceso(){
 
 	window.webkitRequestFileSystem(PERSISTENT,5*1024*1024,crearsis,errores);
@@ -35,7 +34,7 @@ function crear_archivo(){
 	
 }
 
-
+//funcion que permite escribir el contenido de los archivos que se crean 
 function escribir_contenido(fileWriter){
 
 	var texto = document.getElementById("texto").value;
