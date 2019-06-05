@@ -54,6 +54,8 @@ function crearsis(sistema){
 	mostrar();
 }
 
+//el detalle de esta funcion es que al comentar GetFile y habilitar getDirectory es que podremso crear archovos o directorios
+
 function crear(){
 
 	var nombre_archivo=document.getElementById("entrada").value;
